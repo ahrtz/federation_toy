@@ -6,6 +6,11 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "turbo",
+    "eslint-config-prettier",
     "prettier",
   ],
   plugins: ["@typescript-eslint"],
