@@ -7,7 +7,10 @@
     "./setup-counter": "./utils/counter.ts",
     "./counter2": "./utils/counter2.tsx",
     "./BaseFullDialog": "./atomics/BaseFullDialog.tsx",
-    "./BaseDialog": "./atomics/BaseDialog.tsx"
+    "./BaseDialog": "./atomics/BaseDialog.tsx",
+    "./ContainerBox": "./molecules/ContainerBox.tsx",
+    "./MRT_grid": "./molecules/MRT_grid.tsx",
+    "./Tab": "./atomics/Tab.tsx"
   },
   "license": "MIT",
   "scripts": {

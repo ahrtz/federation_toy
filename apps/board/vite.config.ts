@@ -7,10 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "main",
-      remotes: {
-        app1: "http://localhost:7001/assets/remoteEntry.js",
-        board: "http://localhost:7002/assets/remoteEntry.js",
+      name: "board",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./BoardCard": "./src/components/BoardCard.tsx",
+        "./BoardListPage": "./src/pages/BoardListPage.tsx",
       },
       shared: ["react", "react-dom", "@mui/material"],
     }),
@@ -22,9 +23,9 @@ export default defineConfig({
     cssCodeSplit: false,
   },
   server: {
-    port: 7000,
+    port: 7002,
   },
   preview: {
-    port: 7000,
+    port: 7002,
   },
 });
