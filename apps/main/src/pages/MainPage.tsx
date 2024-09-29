@@ -1,6 +1,7 @@
 import Tab from "@repo/ui/Tab";
 import { useMemo } from "react";
-import BoardListPage from "board/BoardListPage";
+
+import BoardCard from "board/BoardCard"
 import ContainerBox from "@repo/ui/ContainerBox";
 import { Suspense } from "react";
 
@@ -15,7 +16,7 @@ const MainPage = () => {
         label: "게시판",
         component: (
           <Suspense>
-            <BoardListPage />
+            <BoardCard />
           </Suspense>
         ),
       },
@@ -25,8 +26,8 @@ const MainPage = () => {
   return (
     <>
       tab
-      <ContainerBox fullWidth>
-        <Tab tabItems={tabItems} />
+      <ContainerBox fullWidth flexWrap={"wrap"}>
+        <Tab tabItems={tabItems} fullWidth/>
       </ContainerBox>
     </>
   );
