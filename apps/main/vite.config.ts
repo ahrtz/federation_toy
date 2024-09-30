@@ -12,7 +12,7 @@ export default defineConfig({
         app1: "http://localhost:7001/assets/remoteEntry.js",
         board: "http://localhost:7002/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom", "@mui/material"],
+      shared: ["react", "react-dom", "@mui/material", "zustand"],
     }),
   ],
   build: {

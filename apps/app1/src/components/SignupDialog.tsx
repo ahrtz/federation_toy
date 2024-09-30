@@ -1,6 +1,5 @@
 import { TextField } from "@mui/material";
 import BaseFullDialog from "@repo/ui/BaseFullDialog";
-import { useEffect } from "react";
 
 interface SignUpDialogProps {
   isOpen: boolean;
@@ -8,10 +7,6 @@ interface SignUpDialogProps {
 }
 
 const SignUpDialog: React.FC<SignUpDialogProps> = ({ isOpen, closeFunc }) => {
-  useEffect(() => {
-    console.log(111111, isOpen);
-    console.log(closeFunc);
-  }, [isOpen]);
   return (
     <>
       <div>12341212312</div>

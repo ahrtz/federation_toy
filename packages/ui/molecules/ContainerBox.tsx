@@ -13,13 +13,9 @@ const ContainerBox = styled(Stack, {
   name: "ContainerBox",
   slot: "Root",
   shouldForwardProp: (prop: string) =>
-    ![
-      "backgroundColor",
-      "fullWidth",
-      "childrenSize",
-      "alignItems",
-      "justifyContent",
-    ].includes(prop),
+    !["backgroundColor", "fullWidth", "childrenSize", "alignItems"].includes(
+      prop
+    ),
 })<ContainerBoxProps>({});
 
 ContainerBox.defaultProps = {

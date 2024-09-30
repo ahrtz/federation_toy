@@ -1,16 +1,25 @@
 import Tab from "@repo/ui/Tab";
-import { useMemo } from "react";
 
-import BoardCard from "board/BoardCard"
+import BoardCard from "board/BoardCard";
 import ContainerBox from "@repo/ui/ContainerBox";
-import { Suspense } from "react";
+import { Suspense, useMemo } from "react";
+
+import Counter1 from "app1/Counter1";
+import Counter2 from "board/Counter2";
+import ResetCounter from "../components/ResetCounter";
 
 const MainPage = () => {
   const tabItems = useMemo(
     () => [
       {
-        label: "홈",
-        component: <>이곳은 홈화면일지도? </>,
+        label: "홈-counter",
+        component: (
+          <ContainerBox>
+            <Counter1 />
+            <Counter2 />
+            <ResetCounter />
+          </ContainerBox>
+        ),
       },
       {
         label: "게시판",
@@ -25,9 +34,8 @@ const MainPage = () => {
   );
   return (
     <>
-      tab
       <ContainerBox fullWidth flexWrap={"wrap"}>
-        <Tab tabItems={tabItems} fullWidth/>
+        <Tab tabItems={tabItems} fullWidth />
       </ContainerBox>
     </>
   );
