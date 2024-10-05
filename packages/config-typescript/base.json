@@ -9,8 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "module": "es2015",
-    "lib": ["ES2017", "DOM"],
+    "module": "ESNext",
     "moduleResolution": "Bundler",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -20,6 +19,8 @@
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "preserveSymlinks": true,
+    "noImplicitAny":false
   },
   "exclude": ["node_modules"]
 }

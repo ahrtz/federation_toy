@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create, StoreApi, UseBoundStore } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
 interface State {
@@ -8,8 +8,9 @@ interface State {
   reset: () => void;
 }
 
-export const CounterStore = create(
-  immer<State>((set) => ({
+// 명시적인 타입 주석 추가
+export const useCounterStore: UseBoundStore<StoreApi<State>> = create<State>()(
+  immer((set) => ({
     count: 0,
     increase: () =>
       set((state) => {
@@ -17,7 +18,7 @@ export const CounterStore = create(
       }),
     decrease: () =>
       set((state) => {
-        state.count = state.count -= 3;
+        state.count -= 3;
       }),
     reset: () =>
       set((state) => {
@@ -26,4 +27,4 @@ export const CounterStore = create(
   }))
 );
 
-export default CounterStore;
+export default useCounterStore;

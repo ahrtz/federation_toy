@@ -24,7 +24,7 @@
     "typescript-eslint": "^8.0.1"
   },
   "name": "with-vite",
-  "packageManager": "yarn@1.22.21",
+  "packageManager": "pnpm@8.15.6",
   "workspaces": [
     "apps/*",
     "packages/*"
