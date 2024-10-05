@@ -1,13 +1,16 @@
 import "./App.css";
-import { default as Counter2 } from "@repo/ui/counter2";
-import MainPage from "./pages/MainPage";
+
+import { BrowserRouter } from "react-router-dom";
+import RenderRoutes from "./routes";
+import BottomNav from "./components/BottomNav";
 
 function App() {
   return (
     <>
-      <MainPage />
-      <h1>Vite + React</h1>
-      <Counter2 />
+      <BrowserRouter>
+        <RenderRoutes />
+        <BottomNav />
+      </BrowserRouter>
     </>
   );
 }

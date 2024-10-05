@@ -12,8 +12,13 @@ export default defineConfig({
       exposes: {
         "./SignUpDialog": "./src/components/SignupDialog",
         "./SignUpPage": "./src/pages/SignUpPage.tsx",
+        "./Counter1": "./src/components/Counter1.tsx",
+        "./counterStore": "./src/store/counterStore.ts",
       },
-      shared: ["react", "react-dom", "@mui/material"],
+      remotes: {
+        board: "http://localhost:7002/assets/remoteEntry.js",
+      },
+      shared: ["react", "react-dom", "@mui/material", "zustand"],
     }),
   ],
   build: {
