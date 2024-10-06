@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Counter2 from "./components/Counter2";
 import BoardListPage from "./pages/BoardListPage";
-// import Counter1 from "app1/Counter1";
+
 
 const Counter1 = React.lazy(() => import("app1/Counter1"));
 

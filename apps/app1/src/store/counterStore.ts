@@ -9,7 +9,7 @@ interface State {
 }
 
 // 명시적인 타입 주석 추가
-export const useCounterStore: UseBoundStore<StoreApi<State>> = create<State>()(
+export const useCounterStore1: UseBoundStore<StoreApi<State>> = create<State>()(
   immer((set) => ({
     count: 0,
     increase: () =>
@@ -27,4 +27,4 @@ export const useCounterStore: UseBoundStore<StoreApi<State>> = create<State>()(
   }))
 );
 
-export default useCounterStore;
+export default useCounterStore1;
