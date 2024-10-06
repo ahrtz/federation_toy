@@ -12,8 +12,7 @@ import useExceededHeight from "../hooks/exceededHeight";
 import SystemIconButton from "./SystemIconButton";
 import CloseIcon from "@mui/icons-material/Close";
 
-export type BaseFullDialogProps = Omit<BaseDialogProps, "size" | "title"> &
-  Pick<DialogProps, "title"> & { noAction?: boolean };
+export type BaseFullDialogProps = Omit<BaseDialogProps, "size" | "title"> & { noAction?: boolean };
 
 export interface StyledBaseFullDialogSize {
   contentSize?: "large" | "medium" | "full";
@@ -68,7 +67,7 @@ const BaseFullDialog: React.FC<
         </SystemIconButton>
       )}
       {exceededHeight ? (
-        <DialogContent tabIndex={0}>
+        <DialogContent >
           <div ref={contentRef} className="base-full-dialog-contents">
             {children}
           </div>
@@ -82,7 +81,7 @@ const BaseFullDialog: React.FC<
       )}
 
       {!noAction && (
-        <DialogActions className={exceededHeight ? "hasLine" : ""}>
+        <DialogActions >
           {actions ??
             (withoutCancel ? (
               <Button

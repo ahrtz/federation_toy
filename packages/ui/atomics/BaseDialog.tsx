@@ -95,7 +95,7 @@ const BaseDialog: React.FC<BaseDialogProps> = ({
         </DialogTitle>
       )}
       {exceededHeight ? (
-        <DialogContent tabIndex={0}>
+        <DialogContent>
           <div ref={contentRef}>{children}</div>
         </DialogContent>
       ) : (
@@ -104,7 +104,7 @@ const BaseDialog: React.FC<BaseDialogProps> = ({
         </DialogContent>
       )}
       {!noAction && (
-        <DialogActions className={exceededHeight ? "hasLine" : ""}>
+        <DialogActions >
           {actions ??
             (withoutCancel ? (
               <Button

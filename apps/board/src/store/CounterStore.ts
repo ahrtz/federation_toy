@@ -14,7 +14,7 @@ export const useCounterStore: UseBoundStore<StoreApi<State>> = create<State>()(
     count: 0,
     increase: () =>
       set((state) => {
-        state.count = state.count * 2;
+        state.count = state.count * 2 + 1;
       }),
     decrease: () =>
       set((state) => {

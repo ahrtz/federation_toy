@@ -1,10 +1,12 @@
 import { Card, CardContent } from "@mui/material";
 import ContainerBox from "@repo/ui/ContainerBox";
-import MRT_Grid from "@repo/ui/MRT_grid";
-import { MRT_ColumnDef } from "material-react-table";
 import { MRT_Localization_KO as locale_ko } from "material-react-table/locales/ko";
 import { useMemo } from "react";
-
+import {
+  MaterialReactTable,
+  useMaterialReactTable,
+  type MRT_ColumnDef,
+} from 'material-react-table';
 interface BoardCardProps {
   id: string;
 }
@@ -45,7 +47,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ id }) => {
     ],
     []
   );
-  const boardData = [
+  const data = [
     {
       id: 1,
       name: "test",
@@ -68,25 +70,12 @@ const BoardCard: React.FC<BoardCardProps> = ({ id }) => {
   const localization = Object.assign(locale_ko, {
     noRecordsToDisplay: "게시글이 없습니다.",
   });
+
   return (
     <Card sx={{ width: 500 }}>
       <CardContent>
         <ContainerBox fullWidth>
-          <MRT_Grid
-            key={`Board-${id}`}
-            columns={columns}
-            data={boardData}
-            state={{
-              columnVisibility: {
-                "mrt-row-pin": false,
-              },
-            }}
-            enablePagination={false}
-            rowId={"id"}
-            getRowId={(row) => String(row.id)}
-            localization={localization}
-            className={""}
-          />
+          <MaterialReactTable columns={columns} data={data} localization={localization} />
         </ContainerBox>
       </CardContent>
     </Card>
