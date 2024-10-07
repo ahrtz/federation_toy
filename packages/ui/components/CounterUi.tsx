@@ -1,18 +1,16 @@
 import ContainerBox from "@repo/ui/ContainerBox";
-import useCounterStore from "../store/CounterStore";
+import useCounterStore from "../store/useCounterStore";
 import { Typography } from "@mui/material";
-import counterStore1 from "app1/counterStore";
 import Button from "@repo/ui/Button";
 
-const Counter2 = () => {
+const CounterUi = () => {
   const counterStore = useCounterStore();
-  const counter1Store = counterStore1();
 
   return (
     <>
       <ContainerBox className="card-counter2">
         <Typography>
-          Counter2 count:{counterStore.count}(store from counter1)
+          CounterUi count:{counterStore.count}(store from ui)
         </Typography>
         <ContainerBox direction="row" justifyContent={"center"}>
           <Button variant="outlined" onClick={counterStore.increase}>
@@ -24,7 +22,7 @@ const Counter2 = () => {
           <Button variant="outlined" onClick={counterStore.reset}>
             reset
           </Button>
-          <Button variant="outlined" onClick={counter1Store.reset}>
+          <Button variant="outlined" onClick={counterStore.reset}>
             reset counter1
           </Button>
         </ContainerBox>
@@ -33,4 +31,4 @@ const Counter2 = () => {
   );
 };
 
-export default Counter2;
+export default CounterUi;

@@ -14,6 +14,7 @@ export default defineConfig({
         "./BoardListPage": "./src/pages/BoardListPage.tsx",
         "./Counter2": "./src/components/Counter2.tsx",
         "./CounterStore": "./src/store/CounterStore.ts",
+        "./SharedButton2": "./src/atomics/SharedButton2.tsx",
       },
       remotes: {
         app1: "http://localhost:7001/assets/remoteEntry.js",

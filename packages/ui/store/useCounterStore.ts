@@ -8,16 +8,16 @@ interface State {
   reset: () => void;
 }
 
-export const CounterStore = create(
+export const useCounterStore = create(
   immer<State>((set) => ({
     count: 0,
     increase: () =>
       set((state) => {
-        state.count = state.count * 2 + 1;
+        state.count += 1;
       }),
     decrease: () =>
       set((state) => {
-        state.count = state.count -= 3;
+        state.count -= 1;
       }),
     reset: () =>
       set((state) => {
@@ -26,4 +26,4 @@ export const CounterStore = create(
   }))
 );
 
-export default CounterStore;
+export default useCounterStore;

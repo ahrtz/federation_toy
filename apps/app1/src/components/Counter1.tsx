@@ -9,7 +9,9 @@ const Counter1 = () => {
   return (
     <>
       <ContainerBox className="card-counter1" border={""}>
-        <Typography>Counter1 count:{counterStore.count}</Typography>
+        <Typography>
+          Counter1 count:{counterStore.count} (store from counter2)
+        </Typography>
         <ContainerBox direction="row" justifyContent={"center"}>
           <Button variant="outlined" onClick={counterStore.increase}>
             increase

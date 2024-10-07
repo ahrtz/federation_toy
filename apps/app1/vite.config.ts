@@ -14,6 +14,7 @@ export default defineConfig({
         "./SignUpPage": "./src/pages/SignUpPage.tsx",
         "./Counter1": "./src/components/Counter1.tsx",
         "./counterStore": "./src/store/counterStore.ts",
+        "./SharedButton1": "./src/atomics/SharedButton1.tsx",
       },
       remotes: {
         board: "http://localhost:7002/assets/remoteEntry.js",

@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "exports": {
     "./Button": "./components/button.tsx",
+    "./CounterUi": "./components/CounterUi.tsx",
+    "./Counter3": "./components/Counter3.tsx",
     "./header": "./components/header.ts",
-    "./setup-counter": "./utils/counter.ts",
-    "./counter2": "./utils/counter2.tsx",
     "./BaseFullDialog": "./atomics/BaseFullDialog.tsx",
     "./BaseDialog": "./atomics/BaseDialog.tsx",
     "./ContainerBox": "./molecules/ContainerBox.tsx",
     "./MRT_grid": "./molecules/MRT_grid.tsx",
-    "./Tab": "./atomics/Tab.tsx"
+    "./Tab": "./atomics/Tab.tsx",
+    "./useCounterStore": "./store/useCounterStore.ts"
   },
   "license": "MIT",
   "scripts": {
